@@ -1,0 +1,60 @@
+/* Hoja de estilos css */
+
+:root{
+    --card-color: rgba(54, 0, 204, 0.555);
+    --card-header-color: crimson;
+    --card-body-color: rgb(40, 4, 124);
+    --card-footer-color: indigo;
+ }
+ .card{
+     margin: 0 auto;
+     background: var(--card-color);
+     color:rgb(255, 255, 255);
+     width: 400px;
+     padding: 20px;
+     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.377);
+     border-radius: 20px;            
+ }
+ .card-header{
+     background: var(--card-header-color);            
+     margin: -20px;
+     padding: 20px;
+     border-radius: 20px 20px 0px 0px;
+ }
+ .card-body{
+     background: var(--card-body-color);
+     margin: -20px;
+     padding: 20px;
+     border-radius: 00px 00px 20px 20px;
+ }
+ .card-footer{
+     background: var(--card-footer-color);
+     margin: -20px;
+     padding: 20px;
+     border-radius: 00px 00px 20px 20px;
+     display: flex;
+     justify-content: space-between
+ }
+ a{
+     padding: 8px;
+     margin: 2px;
+     border-radius: 5px;
+     border: 1px solid white;
+     width: 100%;
+     text-align: center;
+     color: white;
+     text-decoration: none;
+ }
+ a:hover{
+     color: var(--card-body-color);
+     background:white;
+ }
+
+ .services .services_box {
+    text-align: center;
+    background-color: #f6f6f6;
+    padding: 80px 0;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    transition: ease-in all 0.5s;
+}

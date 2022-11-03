@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Taller-Diplomado_JS-main/css/card.css" type="text/css" /> 
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+   
+    <title>Ejercicios taller 3</title>
+        </head>
+        <body>
+        <center> 
+    <h1>  Formulario de perímetros y áreas</h1>
+    </center>
+    <div class="container">   
+        <div class="card-group mt-3">
+          <div class="card text-center border-info">
+            <div class="card-body">
+               
+              <h4 class="card-title">Triangulo</h4>
+              <p class="card-text">
+                
+                <p> Para calcuar el perimetro de un triangulo escribe solo un valor: </p>
+                <input type="number" id="valor_1" placeholder="L*l*l">
+                    <button id="BtnPerimetro"> Perimetro </button>
+    
+                <p> Para calcuar el Area de un triangulo escribe dos valores : </p>
+                <input type="number" id="valor_2" placeholder="base">
+                <input type="number" id="valor_3" placeholder="altura">
+            
+                <button id="BtnArea"> Area </button>  
+            </p>
+                <div id="contenido" style="color:#FF0000">  
+                <p style="color:#FF0000"> Resultado:  </p>
+                
+            </div>
+            </div>
+          </div>          
+    
+          <div class="card text-center border-info">
+            <div class="card-body">
+              <h4 class="card-title">Circulo</h4>
+              <p class="card-text">
+                
+
+                <p> Para calcuar el perimetro de un Circulo escribe solo un valor: </p>
+                        <input type="number" id="valor_4" placeholder="Perimetro">
+                            <button id="BtnPerimetroCirculo"> Perimetro </button>
+                    
+                <p> Para calcuar el area de un Circulo escribe solo un valor: </p>
+                        <input type="number" id="valor_5" placeholder="Diametro">
+                            <button id="BtnAreaCirculo"> Area </button>
+ 
+            </p>
+            <div id="contenido1" style="color:#FF0000">  
+                <p style="color:#FF0000"> Resultado:  </p>
+            </div>
+              
+            </div>
+          </div>          
+      
+          <div class="card text-center border-info">
+            <div class="card-body">
+              <h4 class="card-title">Cuadrado</h4>
+              <p class="card-text">
+                    
+                <p> Para calcuar el perimetro de un Cuadrado escribe solo un valor: </p>
+                <input type="number" id="valor_6" placeholder="Perimetro">
+                    <button id="BtnPerimetroCuadrado"> Perimetro </button>
+            
+            <p> Para calcuar el area de un Cuadrado escribe solo un valor: </p>
+                <input type="number" id="valor_7" placeholder="Area">
+                    <button id="BtnAreaCuadrado"> Area </button>
+                </p>
+                <div id="contenido2" style="color:#FF0000">  
+                    <p style="color:#FF0000"> Resultado:  </p>
+                </div>
+            </div>
+          </div>   
+          
+          
+          <div class="card text-center border-info">
+            <div class="card-body">
+              <h4 class="card-title">Rectangulo</h4>
+              <p class="card-text">
+                    
+               
+                    <p> Para calcuar el perimetro de un Rectangulo escribe dos valores: </p>
+                        <input type="number" id="valor_8" placeholder="2*a">
+                         <input type="number" id="valor_9" placeholder="2*b">
+                            <button id="BtnPerimetroRectangulo"> Perimetro </button>
+                    
+                    <p> Para calcuar el Area de un Rectangulo escribe dos valores: </p>
+                        <input type="number" id="valor_10" placeholder="b">
+                         <input type="number" id="valor_11" placeholder="a">
+                            <button id="BtnAreaRectangulo"> Area </button>
+
+                            </p>
+                <div id="contenido3" style="color:#FF0000">  
+                    <p style="color:#FF0000"> Resultado:  </p>
+                </div>
+            </div>
+          </div>
+    
+        </div>
+    </div>  
+    <div> 
+<br>
+
+
+        <center>
+        <h1> Ejercicio De prestamo</h1>
+        </center>
+        <br>
+
+        <table align="center"> 
+            <tr >
+                <th>Valor del prestamo</th>
+                <th>Valor del interes</th>
+                <th>cantidad de meses</th>
+                <th>Calcular</th>
+                <th>Respuesta</th>
+                
+            </tr>
+            <tr>
+                <th>
+                    <input type="number" id="valor_12" placeholder="prestamo en pesos" >
+                </th>
+             <th>
+                <input input type="number" id="valor_13" placeholder="tasa de interes compuesto">      
+                </th>
+                <th>
+                    <input type="number" id="valor_14" placeholder="meses">
+                </th>
+                <th>
+                    <button id="BtnPrestamo"> Calcular </button>
+                </th>
+
+                <th>
+
+                   <div id="contenido4" style="color:#FF0000">  
+                        <p style="color:#FF0000">  </p>
+                    </div>
+                </th>
+
+
+            </tr>
+        </table>
+    
+
+    
+            <script src="./Taller3.js"></script>
+          
+</body>
+</html>
