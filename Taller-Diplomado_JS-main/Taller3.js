@@ -134,8 +134,8 @@ function GenerarTabla(){
     ]
     contenido_tabla = [
         ["0", "1000000", "0", "1000000"],
-        ["0", "1000000", "20000", "1020000"],
-        ["0", "1020000", "20400", "1040400"]
+        ["1", "1000000", "20000", "1020000"],
+        ["2", "1020000", "20400", "1040400"]
     ]
     heads.forEach(element => {
         th = document.createElement("th");
@@ -144,12 +144,14 @@ function GenerarTabla(){
     });
     table.appendChild(tr)
 
-    for (let mes = 0; mes < 10; mes++) {
+
+    for (let mes = 0; mes < contenido_tabla.length; mes++) {
+        row_mes = contenido_tabla[mes]
         tr = document.createElement("tr");
-        for (let index = 0; index < 4; index++) {
-            const element = index;
+        for (let index = 0; index < row_mes.length; index++) {
+            const element = row_mes[index];
             td = document.createElement("td");
-            td.innerHTML = mes + " - " + element 
+            td.innerHTML = element  
             tr.appendChild(td) 
         }
         table.appendChild(tr)
