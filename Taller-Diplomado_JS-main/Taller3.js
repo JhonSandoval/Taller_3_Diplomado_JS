@@ -23,6 +23,7 @@ document.getElementById("BtnAreaRectangulo").addEventListener("click", CalcularA
 //Prestamo
 
 document.getElementById("BtnPrestamo").addEventListener("click", Prestamo);
+document.getElementById("BtnGenerarTabla").addEventListener("click", GenerarTabla);
 
 
 // Calcular perimetro y area de un trinagulo
@@ -123,3 +124,30 @@ contenido.innerHTML = 'Resultado_tasa_interes: ' + resultado + ' Resultado de ti
 }
 
 
+function GenerarTabla(){
+    contenido = document.getElementById('tabla_resultado')
+    table = document.createElement("table");
+    
+    tr = document.createElement("tr");
+    th = document.createElement("th");
+    th.innerHTML = "mes"
+    tr.appendChild(th)
+
+    th = document.createElement("th");
+    th.innerHTML = "Capital"
+    tr.appendChild(th)
+
+    th = document.createElement("th");
+    th.innerHTML = "interes"
+    tr.appendChild(th)
+
+    th = document.createElement("th");
+    th.innerHTML = "saldo"
+    tr.appendChild(th)
+
+    table.appendChild(tr)
+
+    contenido.appendChild(table)
+
+    console.log('voy a generar una tabla bonita')
+}
