@@ -132,39 +132,29 @@ function GenerarTabla(){
     heads = [
         "mes", "Capital", "interes", "saldo"
     ]
-    // for (let index = 0; index < heads.length; index++) {
-    //     const element = heads[index];
-    //     th = document.createElement("th");
-    //     th.innerHTML = element
-    //     tr.appendChild(th)   
-    // }
-
+    contenido_tabla = [
+        ["0", "1000000", "0", "1000000"],
+        ["0", "1000000", "20000", "1020000"],
+        ["0", "1020000", "20400", "1040400"]
+    ]
     heads.forEach(element => {
         th = document.createElement("th");
         th.innerHTML = element
         tr.appendChild(th) 
     });
-
-
-    // tr = document.createElement("tr");
-    // th = document.createElement("th");
-    // th.innerHTML = "mes"
-    // tr.appendChild(th)
-
-    // th = document.createElement("th");
-    // th.innerHTML = "Capital"
-    // tr.appendChild(th)
-
-    // th = document.createElement("th");
-    // th.innerHTML = "interes"
-    // tr.appendChild(th)
-
-    // th = document.createElement("th");
-    // th.innerHTML = "saldo"
-    // tr.appendChild(th)
-
     table.appendChild(tr)
 
+    for (let mes = 0; mes < 10; mes++) {
+        tr = document.createElement("tr");
+        for (let index = 0; index < 4; index++) {
+            const element = index;
+            td = document.createElement("td");
+            td.innerHTML = mes + " - " + element 
+            tr.appendChild(td) 
+        }
+        table.appendChild(tr)
+    }
+   
     contenido.appendChild(table)
 
     console.log('voy a generar una tabla bonita')
