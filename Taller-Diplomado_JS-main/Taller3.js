@@ -108,7 +108,7 @@ function Prestamo(){
 
     valor_prestamo = parseInt(document.getElementById('valor_12').value);
     //console.log(valor_prestamo)
-    valor_tasa_interes = parseFloat(document.getElementById('valor_13').value);
+    valor_tasa_interes = parseFloat(document.getElementById('valor_13').value)/100;
     //console.log(valor_tasa_interes)
     tiempo = parseInt(document.getElementById('valor_14').value);
     //console.log(tiempo)
@@ -119,10 +119,15 @@ function Prestamo(){
     resultado =  valor_prestamo * y
 
 contenido = document.getElementById('contenido4')
-contenido.innerHTML = 'Resultado_tasa_interes: ' + resultado + ' Resultado de tiempo: ' + tiempo
+contenido.innerHTML = '</br> Total de intereses a pagar es: ' + formatMoney( Math.round(resultado)) + ' </br> Total a pagar: ' + formatMoney( Math.round(resultado+valor_prestamo))
 
 }
 
+function formatMoney(subject){
+    subject = subject + ""
+    return subject.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+
+}
 
 function GenerarTabla(){
     contenido = document.getElementById('tabla_resultado')
@@ -132,11 +137,7 @@ function GenerarTabla(){
     heads = [
         "mes", "Capital", "interes", "saldo"
     ]
-    contenido_tabla = [
-        ["0", "1000000", "0", "1000000"],
-        ["1", "1000000", "20000", "1020000"],
-        ["2", "1020000", "20400", "1040400"]
-    ]
+
     heads.forEach(element => {
         th = document.createElement("th");
         th.innerHTML = element
@@ -144,16 +145,34 @@ function GenerarTabla(){
     });
     table.appendChild(tr)
 
+    // Get values from form
+    
+    valor_prestamo = parseInt(document.getElementById('valor_12').value);
+    valor_tasa_interes = parseFloat(document.getElementById('valor_13').value);
+    tiempo = parseInt(document.getElementById('valor_14').value);
 
-    for (let mes = 0; mes < contenido_tabla.length; mes++) {
-        row_mes = contenido_tabla[mes]
+    for (let mes = 0; mes < tiempo; mes++) {
+        
         tr = document.createElement("tr");
-        for (let index = 0; index < row_mes.length; index++) {
-            const element = row_mes[index];
-            td = document.createElement("td");
-            td.innerHTML = element  
-            tr.appendChild(td) 
-        }
+        
+        td = document.createElement("td");
+        td.innerHTML = mes  
+        tr.appendChild(td) 
+                
+        td = document.createElement("td");
+        td.innerHTML = formatMoney(valor_prestamo)
+        tr.appendChild(td) 
+        calculo_interes = Math.round(valor_prestamo * valor_tasa_interes/100)
+        valor_prestamo = valor_prestamo + calculo_interes
+        td = document.createElement("td");
+        td.innerHTML = formatMoney(calculo_interes)
+        tr.appendChild(td) 
+        
+        td = document.createElement("td");
+        td.innerHTML = formatMoney(valor_prestamo)
+        tr.appendChild(td) 
+        
+        
         table.appendChild(tr)
     }
    
