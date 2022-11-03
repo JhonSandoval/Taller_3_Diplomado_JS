@@ -127,23 +127,41 @@ contenido.innerHTML = 'Resultado_tasa_interes: ' + resultado + ' Resultado de ti
 function GenerarTabla(){
     contenido = document.getElementById('tabla_resultado')
     table = document.createElement("table");
-    
+    table.classList.add("table")
     tr = document.createElement("tr");
-    th = document.createElement("th");
-    th.innerHTML = "mes"
-    tr.appendChild(th)
+    heads = [
+        "mes", "Capital", "interes", "saldo"
+    ]
+    // for (let index = 0; index < heads.length; index++) {
+    //     const element = heads[index];
+    //     th = document.createElement("th");
+    //     th.innerHTML = element
+    //     tr.appendChild(th)   
+    // }
 
-    th = document.createElement("th");
-    th.innerHTML = "Capital"
-    tr.appendChild(th)
+    heads.forEach(element => {
+        th = document.createElement("th");
+        th.innerHTML = element
+        tr.appendChild(th) 
+    });
 
-    th = document.createElement("th");
-    th.innerHTML = "interes"
-    tr.appendChild(th)
 
-    th = document.createElement("th");
-    th.innerHTML = "saldo"
-    tr.appendChild(th)
+    // tr = document.createElement("tr");
+    // th = document.createElement("th");
+    // th.innerHTML = "mes"
+    // tr.appendChild(th)
+
+    // th = document.createElement("th");
+    // th.innerHTML = "Capital"
+    // tr.appendChild(th)
+
+    // th = document.createElement("th");
+    // th.innerHTML = "interes"
+    // tr.appendChild(th)
+
+    // th = document.createElement("th");
+    // th.innerHTML = "saldo"
+    // tr.appendChild(th)
 
     table.appendChild(tr)
 
