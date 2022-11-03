@@ -125,7 +125,7 @@ contenido.innerHTML = '</br> Total de intereses a pagar es: ' + formatMoney( Mat
 
 function formatMoney(subject){
     subject = subject + ""
-    return subject.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+    return "$ "+ subject.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 
 }
 
